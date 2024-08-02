@@ -19,7 +19,7 @@ const Navbar = () => {
        
       <div className="wrapper">
       <div className="left-nav">
-        <img src="https://kanakku.dreamstechnologies.com/html/template-materializecss/assets/img/logo.png"  className="log-navbar"/>
+        <img src="logo.jpg"  className="log-navbar"/>
         </div>
       
         <div className="search">

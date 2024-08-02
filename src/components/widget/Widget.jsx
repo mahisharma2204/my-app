@@ -9,13 +9,14 @@ const Widget = ({ type }) => {
   let data;
 
   //temporary
-  const amount = 100;
-  const diff = 20;
+  // const amount = 100;
+  // const diff = 20;
 
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "Amount Due",
+        amount: "1,234",
         isMoney: false,
         link: "See all users",
         icon: (
@@ -31,7 +32,8 @@ const Widget = ({ type }) => {
       break;
     case "order":
       data = {
-        title: "ORDERS",
+        title: "Customers",
+        amount: "3,642",
         isMoney: false,
         link: "View all orders",
         icon: (
@@ -47,7 +49,8 @@ const Widget = ({ type }) => {
       break;
     case "earning":
       data = {
-        title: "EARNINGS",
+        title: "Invoices",
+        amount: "1,021",
         isMoney: true,
         link: "View net earnings",
         icon: (
@@ -60,7 +63,8 @@ const Widget = ({ type }) => {
       break;
     case "balance":
       data = {
-        title: "BALANCE",
+        title: "Estimates",
+        amount: "8943",
         isMoney: true,
         link: "See details",
         icon: (
@@ -80,20 +84,25 @@ const Widget = ({ type }) => {
 
   return (
     <div className="widget">
-      <div className="left">
+       <div className="right">
+        <span>{data.icon}</span>
+        <div className="left">
+        <div className="left_title">
         <span className="title">{data.title}</span>
-        <span className="counter">
-          {data.isMoney && "$"} {amount}
-        </span>
-        <span className="link">{data.link}</span>
-      </div>
-      <div className="right">
-        <div className="percentage positive">
-          <KeyboardArrowUpIcon />
-          {diff} %
         </div>
-        {data.icon}
+       <div className="left_amount"> 
+       <span className="amount">{data.amount}</span>
+       </div>
+    
       </div>
+      </div>
+
+
+      <div  className="progress-bar">
+        
+      </div>
+     
+      
     </div>
   );
 };

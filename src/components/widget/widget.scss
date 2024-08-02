@@ -16,10 +16,14 @@
       justify-content: space-between;
   
       .title {
-        font-weight: bold;
+        font-weight: 700;
         font-size: 14px;
-        color: rgb(160, 160, 160);
+        color: rgb(83, 75, 75);
       }
+      span.amount {
+        font-size: 15px;
+        
+    }
   
       .counter {
         font-size: 28px;
@@ -46,8 +50,8 @@
       }
   
       .icon {
-        font-size: 18px;
-        padding: 5px;
+        font-size: 3rem;
+        padding: 6px;
         border-radius: 5px;
         align-self: flex-end;
       }
